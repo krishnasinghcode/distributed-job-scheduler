@@ -1,0 +1,19 @@
+{
+  "name": "distributed-job-scheduler",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "services/*",
+    "web"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev -w services/api",
+    "dev:worker": "npm run dev -w services/worker",
+    "dev:scheduler": "npm run dev -w services/scheduler",
+    "dev:web": "npm run dev -w web",
+    "prisma:generate": "npm run generate -w packages/shared",
+    "prisma:migrate": "npm run migrate -w packages/shared",
+    "prisma:seed": "npm run seed -w packages/shared",
+    "test": "npm run test -w services/api && npm run test -w services/worker"
+  }
+}
