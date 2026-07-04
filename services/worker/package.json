@@ -1,0 +1,22 @@
+{
+  "name": "@scheduler/worker",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@scheduler/shared": "*",
+    "ioredis": "^5.4.1",
+    "os": "^0.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "ts-node-dev": "^2.0.0",
+    "@types/node": "^20.14.0",
+    "vitest": "^2.1.1"
+  }
+}
